@@ -8,7 +8,7 @@ class Players
 
         def move(board, win_combos)
             puts "AI is thinking....."
-            sleep 3
+    
             if board.turn_count >= 2
                 find_tokens(board)
                 places_taken_by_challenger(board)
