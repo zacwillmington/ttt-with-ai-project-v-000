@@ -67,15 +67,16 @@ class Players
                     	  !b.all?{|e| @challenger_places.include?(e)}
                     	 end
                          binding.pry
-                         
-                    	 next_move = second_best_option[0] 
+
+                    	 next_move = second_best_option[0]
                          if next_move == @places_of_tokens
                              next_move = second_best_option[1]
                          end
                          if next_move == @places_of_tokens
                              next_move = second_best_option[2]
                          end
-                         next_move.to_s
+                         convert_index = next_move + 1
+                         convert_index.to_s
                     else
                         best_option = final_combo.reject do |i|
                             @places_of_tokens.include?(i)
