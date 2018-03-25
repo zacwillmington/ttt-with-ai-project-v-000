@@ -64,11 +64,9 @@ class Players
         def quickest_win_combo(board, win_combos)
                     if @final_combo == nil
                     	second_best_option = @combos_available.detect do |b|
-                    	  b.include?(@places_of_tokens[0]) && !b.all?{|e| @challenger_places.include?(e)}
-
-
+                    	  b.include?(@places_of_tokens[0]) && !b.all?{|e| @challenger_places.include?(e)
                     	 end
-
+                         binding.pry
                     	 next_move = second_best_option[0] + 1
                          next_move.to_s
                     else
