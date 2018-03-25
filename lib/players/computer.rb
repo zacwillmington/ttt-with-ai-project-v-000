@@ -66,7 +66,6 @@ class Players
                     	second_best_option = @combos_available.detect do |b|
                     	  !b.all?{|e| @challenger_places.include?(e)}
                     	 end
-                         binding.pry
 
                     	 next_move = second_best_option[0]
                          if next_move == @places_of_tokens
